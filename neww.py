@@ -189,7 +189,7 @@ def editStudent():
                     elif (len(new_dept) > 50):
                         print("Department name can't exceed 50 characters. Please try again.")
                         continue
-                    new_dept = new_dept.title()  # Capitalize the first letter of each word
+                    new_dept = new_dept.title()  
                     break
                     student["dept"] = new_dept
                     print("\nStudent information updated successfully!\n")
