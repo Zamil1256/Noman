@@ -42,26 +42,26 @@ def Main():
         else:
             print("\nInvalid choice. Please input a valid option.\n")
 
-def addStudent(): # Function for adding student in database
+def addStudent(): 
     print("\nPlease enter a new Student ID. Ensure the ID is within 20 characters and does not contain spaces or special characters. Type 'X' to cancel.")
-    while (True): # Infinte loop for taking student id if they doest meet given criteria
-        id = input("Student Id : ").strip() # Input with strip function for removing extra space
+    while (True):
+        id = input("Student Id : ").strip() 
         if (id == "X"):
             return
-        elif (id == ""): # Validating if wether input is empty or not
+        elif (id == ""): 
             print("\nThe ID field can't be empty. Please try again.")
-            continue # loop continue beacause input is empty
-        elif (len(id) >= 20): # Validating if input is over length or not
+            continue 
+        elif (len(id) >= 20): 
             print("\nThe ID field can't exceed 20 characters. Please try again.")
-            continue # Loop continue becuase id is over length
+            continue 
         elif (id.isalnum() == False):
             print("\nThe ID must not contain space or special charecters. Please try again.")
             continue
-        for student in students: # For loop for checking if input already in database or not
+        for student in students: 
             if (student['id'] == id):
                 print("A Student with the same ID already exists.")
-                return # Function termination because student already in database
-        break # Break infinite loop because all criteria is met
+                return 
+        break 
     print("\nPlease enter the student's name. The name must be between 3 to 50 characters. Type 'X' to cancel.")
     while (True):
         name = input("Student Name : ").strip()
@@ -76,7 +76,7 @@ def addStudent(): # Function for adding student in database
         elif (name.isdecimal() == True):
             print("The name can not be a numeric value. Please try again.")
             continue
-        name = name.title()  # Capitalize the first letter of each word
+        name = name.title()  
         break
     print("\nPlease enter the department name. The name must not exceed 50 characters. Type 'X' to cancel.")
     while (True):
@@ -89,7 +89,7 @@ def addStudent(): # Function for adding student in database
         elif (len(dept) > 50):
             print("Department name can't exceed 30 characters. Please try again.")
             continue
-        dept = dept.title()  # Capitalize the first letter of each word
+        dept = dept.title()  
         break
     students.append({'id': id, 'name': name, 'dept': dept})
     updateDatabase()
