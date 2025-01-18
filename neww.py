@@ -1,5 +1,5 @@
 students = [
-    {'id': "01", 'name': "Md. Rasel Molla", 'dept': "Geology & Mining"},
+    {'id': "01", 'name': "Md Noman Islam", 'dept': "Geology & Mining"},
     {'id': "02", 'name': "Ismail Akon", 'dept': "Chemistry"},
     {'id': "03", 'name': "Israfil Hawlader", 'dept': "Botany"},
     {'id': "04", 'name': "Akhi Kazi", 'dept': "Bangla"}
